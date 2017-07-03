@@ -1,0 +1,15 @@
+<div class="col-sm-12">
+    <marquee id="topmarquee" direction="left" behavior="scroll" heigh="20" style="width: 100%;">
+        <ng-repeat ng-repeat="newsitm in news">{{newsitm.news}}&nbsp;||&nbsp;</ng-repeat>
+    </marquee>
+
+</div>
+<script>
+    angular.element("#topmarquee").on('mouseover', function () {
+        this.stop();
+    });
+    angular.element("#topmarquee").on('mouseleave', function () {
+        this.start();
+    });
+
+</script>

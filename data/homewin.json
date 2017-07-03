@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Grego1",
+        "game": "Game1",
+        "price": 111
+    },
+    {
+        "name": "Grego2",
+        "game": "Game2",
+        "price": 121
+    },
+    {
+        "name": "Grego3",
+        "game": "Game3",
+        "price": 131
+    },
+    {
+        "name": "Grego4",
+        "game": "Game4",
+        "price": 141
+    },
+    {
+        "name": "Grego5",
+        "game": "Game5",
+        "price": 151
+    },
+    {
+        "name": "Grego6",
+        "game": "Game6",
+        "price": 161
+    }
+]
+
+

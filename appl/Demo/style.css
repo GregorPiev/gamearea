@@ -1,0 +1,26 @@
+/*
+    Created on : 25-May-2017, 11:13:23
+    Author     : gregori.p
+*/
+.game-item{
+    background-color: blue;
+    border-radius: 5px;
+    margin: 5px;
+}
+.game-item .short-descr{
+    padding: 5px 5px;
+    margin: 10px 0 0 0;
+    font-size: 100%;
+}
+.game-item img{
+    max-height: 150px;
+    min-height: 150px;
+    width: 90%;
+    margin: 10px 5%;
+    border-radius: 5px;
+}
+.game-item h5{
+    font-weight: bold;
+    padding: 10px;
+    font-size: 120%;
+}

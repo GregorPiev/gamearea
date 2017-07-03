@@ -1,0 +1,42 @@
+<link href="appl/Home/style.css" rel="stylesheet" />
+<div id="page" class="col-sm-12">
+    <ol class="breadcrumb">
+        <li><a href="/#/">Home</a></li>
+    </ol>
+    <div class="jumbotron" ng-bind-html="homecontent"></div>
+
+    <div class="wrapper-middle col-sm-12 col-xs-12">
+        <div class="jumbotron col-sm-8 col-xs-12">
+            <div class="page-header">
+                <h1>Popular Demo Games <small>Without sign on</small></h1>
+            </div>
+            <div id="wrapper-items" class="col-sm-12 col-xs-12">
+                <div class="col-sm-4 col-xs-12" ng-repeat="popgame in popgames">
+                    <div class="game-item text-center" >
+                        <div class="page-header">
+                            <h5 ng-bind-html="popgame.name"></h5>
+                        </div>
+
+                        <img ng-src="upload/{{popgame.img}}" alt="" title=""/>
+                        <div class="short-descr label-info center-block" ng-bind-html="popgame.shorts"></div>
+                        <a ng-href="" class="btn btn-primary btn-sm center-block">Play</a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="jumbotron col-sm-3 col-xs-12">
+            <div class="page-header">
+                <h1>Last Winners</h1>
+            </div>
+            <div class="col-sm-12 col-xs-12" ng-repeat="winner in winners">
+                <h5 ng-bind-html="winner.name"></h5>
+                <div class="short-descr-winner label-info center-block">
+                    Game:{{winner.game}}&nbsp;&nbsp; Price:{{winner.price}}$</div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,49 @@
+
+*{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: normal;
+    text-align: left;
+    color: #fff;
+    position: relative;
+    top:0px;
+    left:0px;
+}
+$mar_arround: 10px;
+body.main{background-color: blue !important;}
+
+img#toplogo{
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: -15px;
+}
+.navbar-brand{padding: 0;}
+
+#page{
+    min-height: 60vh;
+    .breadcrumb{
+        padding: 2px $mar_arround;
+        background-color: navy !important;
+        a{
+            color:#fff;
+        }
+    }
+    .jumbotron{
+        padding: 10px;
+        background-color: navy;
+        color:#fff;
+        font-size: 110%;
+        h1{font-size: 200% !important;margin:0px !important;}
+        h2{font-size: 150% !important;margin:0px !important;}
+        .page-header{margin: 0px;}
+        .panel{
+            background-color: navy;margin-top: 10px;
+            .panel-body {padding: 15px 0px;}
+        }
+        .panel-default {border: none;}
+    }
+}
+

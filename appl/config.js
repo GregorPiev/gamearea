@@ -1,0 +1,156 @@
+'use strict';
+gameAppl.config(function ($stateProvider, $urlRouterProvider) {
+    //$localStorageProvider.set("counter", 1);
+    $urlRouterProvider.otherwise('/');
+    console.log("Config start");
+    $stateProvider
+            .state('Home', {
+                url: '/',
+                views: {
+                    stripwinners: {
+                        controller: 'ctrlStripwinners',
+                        templateUrl: 'appl/Stripwinners/stripwinners.html'
+                    },
+                    topmenu: {
+                        controller: 'ctrlTopmenu',
+                        templateUrl: 'appl/Topemenu/topmenu.html'
+                    },
+                    content: {
+                        controller: 'ctrHome',
+                        templateUrl: 'appl/Home/home.html'
+                    }
+                }
+            })
+            .state('Terms', {
+                url: '/terms',
+                views: {
+                    stripwinners: {
+                        controller: 'ctrlStripwinners',
+                        templateUrl: 'appl/Stripwinners/stripwinners.html'
+                    },
+                    topmenu: {
+                        controller: 'ctrlTopmenu',
+                        templateUrl: 'appl/Topemenu/topmenu.html'
+                    },
+                    content: {
+                        controller: 'ctrlTerms',
+                        templateUrl: 'appl/Terms/terms.html'
+                    }
+                }
+            })
+            .state('ContactUs', {
+                url: '/contactus',
+                views: {
+                    stripwinners: {
+                        controller: 'ctrlStripwinners',
+                        templateUrl: 'appl/Stripwinners/stripwinners.html'
+                    },
+                    topmenu: {
+                        controller: 'ctrlTopmenu',
+                        templateUrl: 'appl/Topemenu/topmenu.html'
+                    },
+                    content: {
+                        controller: 'ctrlContact',
+                        templateUrl: 'appl/Contact/contact.html'
+                    }
+                }
+            })
+            .state('Registration', {
+                url: '/registration',
+                views: {
+                    stripwinners: {
+                        controller: 'ctrlStripwinners',
+                        templateUrl: 'appl/Stripwinners/stripwinners.html'
+                    },
+                    topmenu: {
+                        controller: 'ctrlTopmenu',
+                        templateUrl: 'appl/Topemenu/topmenu.html'
+                    },
+                    content: {
+                        controller: 'ctrlRegistration',
+                        templateUrl: 'appl/Registration/registration.html'
+                    }
+                }
+            })
+            .state('Account', {
+                url: '/account',
+                views: {
+                    stripwinners: {
+                        controller: 'ctrlStripwinners',
+                        templateUrl: 'appl/Stripwinners/stripwinners.html'
+                    },
+                    topmenu: {
+                        controller: 'ctrlTopmenu',
+                        templateUrl: 'appl/Topemenu/topmenu.html'
+                    },
+                    content: {
+                        controller: 'ctrlAccount',
+                        templateUrl: 'appl/Account/account.html'
+                    }
+                }
+            })
+            .state('Recommendations', {
+                url: '/recommendations',
+                views: {
+                    stripwinners: {
+                        controller: 'ctrlStripwinners',
+                        templateUrl: 'appl/Stripwinners/stripwinners.html'
+                    },
+                    topmenu: {
+                        controller: 'ctrlTopmenu',
+                        templateUrl: 'appl/Topemenu/topmenu.html'
+                    },
+                    content: {
+                        controller: 'ctrlRecomendatins',
+                        templateUrl: 'appl/Recomendations/recomendations.html'
+                    }
+                }
+            })
+            .state('Demo', {
+                url: '/demo',
+                views: {
+                    stripwinners: {
+                        controller: 'ctrlStripwinners',
+                        templateUrl: 'appl/Stripwinners/stripwinners.html'
+                    },
+                    topmenu: {
+                        controller: 'ctrlTopmenu',
+                        templateUrl: 'appl/Topemenu/topmenu.html'
+                    },
+                    content: {
+                        controller: 'ctrlDemo',
+                        templateUrl: 'appl/Demo/demo.html'
+                    }
+                }
+            })
+            .state('Real', {
+                url: '/real',
+                views: {
+                    stripwinners: {
+                        controller: 'ctrlStripwinners',
+                        templateUrl: 'appl/Stripwinners/stripwinners.html'
+                    },
+                    topmenu: {
+                        controller: 'ctrlTopmenu',
+                        templateUrl: 'appl/Topemenu/topmenu.html'
+                    },
+                    content: {
+                        controller: 'ctrlReal',
+                        templateUrl: 'appl/Real/real.html'
+                    }
+                }
+            });
+});
+
+gameAppl.run([function () {
+        var config = {
+            apiKey: "AIzaSyCuZsJyDThwilTM-6V-bEVla8Iuo3uo2O8",
+            authDomain: "gamearea-e98ec.firebaseapp.com",
+            databaseURL: "https://gamearea-e98ec.firebaseio.com",
+            projectId: "gamearea-e98ec",
+            storageBucket: "gamearea-e98ec.appspot.com",
+            messagingSenderId: "837142383254"
+        };
+        firebase.initializeApp(config);
+    }]);
+

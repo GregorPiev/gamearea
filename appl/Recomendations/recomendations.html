@@ -1,0 +1,31 @@
+<link href="appl/Recomendations/style.css" rel="stylesheet" />
+<div id="page" class="col-sm-12">
+    <ol class="breadcrumb">
+        <li><a href="/gamearea/#/">Home</a></li>
+        <li><a href="/gamearea/#/demo" ng-bind="page"></a></li>
+    </ol>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="page-header">
+                <h1 ng-bind="title"></h1>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body" ng-bind-html="content"></div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="page-header">
+                <h2 ng-bind="title"></h2>
+            </div>
+            <div class="panel panel-default">
+                <div id='mount-point' class="panel-body">
+
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
