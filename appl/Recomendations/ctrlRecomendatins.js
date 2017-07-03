@@ -1,5 +1,6 @@
 'use strict';
-gameAppl.controller('ctrlRecomendatins', function ($scope, DataServiceSQL, $window) {
+gameAppl.controller('ctrlRecomendatins', function ($scope, $rootScope, DataServiceSQL, $window) {
+    $rootScope.$emit("changeMenu", 'recomendations');
 
     DataServiceSQL.read(6, function (data) {
         if (data.status == 200) {
@@ -13,7 +14,6 @@ gameAppl.controller('ctrlRecomendatins', function ($scope, DataServiceSQL, $wind
     DataServiceSQL.readRecomendations(function (data) {
         if (data.status == 200) {
             let result = data.data.data;
-            console.log("%cResult: " + JSON.stringify(result), "color: green");
             $window.localStorage.setItem("notes", JSON.stringify(result));
         }
 

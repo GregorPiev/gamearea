@@ -1,7 +1,8 @@
 'use strict';
-gameAppl.controller('ctrlDemo', function ($scope, DataServiceSQL) {
+gameAppl.controller('ctrlDemo', function ($scope, $rootScope, DataServiceSQL) {
     let home = 0;
     let type = "free";
+    $rootScope.$emit('changeMenu', 'demo');
 
     DataServiceSQL.read(3, function (data) {
         if (data.status == 200) {

@@ -3,7 +3,6 @@ gameAppl.controller('ctrlLogin', ['$scope', '$rootScope', '$location', 'DataServ
         let result_send = false;
         $scope.resultMesagge = '';
 
-
         $scope.sendVal = function () {
             let loginvalues = {
                 'username': $scope.username,

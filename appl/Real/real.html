@@ -1,7 +1,42 @@
+<link href="appl/Real/style.css" rel="stylesheet" />
 <div id="page" class="col-sm-12">
     <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Real</a></li>
+        <li><a href="/gamearea/#/">Home</a></li>
+        <li><a href="/gamearea/#/real" ng-bind="page"></a></li>
     </ol>
-    Real Real Real Real Real Real Real Real Real Real Real Real Real Real Real Real 
+    <div class="container">
+        <div class="jumbotron">
+            <div class="page-header">
+                <h1 ng-bind="title"></h1>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body" ng-bind-html="content"></div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="page-header">
+                <h2>Games</h2>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ng-repeat ng-repeat="popgame in games">
+                        <div class="col-sm-4 col-xs-12" >
+                            <div class="game-item text-center" >
+                                <div class="page-header">
+                                    <h5 ng-bind-html="popgame.name"></h5>
+                                </div>
+
+                                <img ng-src="upload/{{popgame.img}}" alt="" title=""/>
+                                <div class="short-descr label-info center-block" ng-bind-html="popgame.shorts"></div>
+                                <a ng-href="" class="btn btn-primary btn-sm center-block">Play</a>
+                            </div>
+                        </div>
+                    </ng-repeat>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

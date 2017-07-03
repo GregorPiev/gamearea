@@ -112,5 +112,5 @@ var NotesApp = React.createClass({
 });
 ReactDOM.render(
         <NotesApp/>,
-        document.getElementById('mount-point')
+        document.querySelector('#mount-point')
         );

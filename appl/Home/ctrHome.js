@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrHome', ['$scope', 'DataServiceSQL', function ($scope, DataServiceSQL) {
+gameAppl.controller('ctrHome', ['$scope', '$rootScope', 'DataServiceSQL', function ($scope, $rootScope, DataServiceSQL) {
         let home = 1;
         let type = "free";
         DataServiceSQL.read(1, function (data) {
@@ -21,5 +21,7 @@ gameAppl.controller('ctrHome', ['$scope', 'DataServiceSQL', function ($scope, Da
                 $scope.winners = data.data.data;
             }
         });
+        $rootScope.$emit('changeMenu', 'home');
+
 
     }]);
