@@ -6,15 +6,19 @@
     background-color: navy;
 }
 a.topmenu-link{
-    color:#fff;
+    color:navy;
     font-size: 100%;
+    background-color: #63c2c8 !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-left: 1px;
 }
 a.topmenu-link:hover{
     color:#fff;
     font-size: 100%;
     background-color: blue !important;
 }
-.navbar-collapse{width: 58% !important;}
+
 #user-wrapper{margin: 3px 0 auto 0; }
 .button-sign{
     padding: 5px 10px !important;
@@ -22,4 +26,12 @@ a.topmenu-link:hover{
     line-height: 1.5 !important;
     border-radius: 3px !important;
 }
-#anonim{margin-top: 10px;}
+#anonim{margin-top: 10px;margin-left:5px;}
+#logined{margin-left:5px;float:right !important;}
+li.active  a.topmenu-link{
+    color:#fff;
+    background-color: blue !important;
+}
+.navbar {
+    border-width:0 !important;
+}

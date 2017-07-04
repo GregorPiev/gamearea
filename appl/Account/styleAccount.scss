@@ -1,0 +1,41 @@
+/*
+    Created on : Jul 3, 2017, 12:31:22 PM
+    Author     : Grego
+*/
+#userValues{
+    tbody{
+        td{
+            color: navy;
+            font-size: 120%;
+        }
+    }
+}
+#userGames_wrapper{
+    table{
+        background-color: blue;
+        th{
+            font-size: 150%  !important;
+            color: navy !important;
+        }
+        td{
+            font-size: 150%  !important;
+            color: navy !important;
+        }
+        &:hover{
+            td{
+                color: navy !important;
+            }
+
+        }
+    }
+    div.dataTables_length select{color: navy !important;}
+    input[type='search']{color: navy !important;}
+    td{
+
+        &:hover{
+            color: orange !important;
+        }
+    }
+
+}
+

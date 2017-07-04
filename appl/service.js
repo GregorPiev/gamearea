@@ -86,7 +86,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      *
      * @param {type} idpage
      * @param {type} callback
-     * @returns {undefined}
+     * @returns {object} responce
      */
     this.read = function (idpage, callback) {
         let postdata = {
@@ -119,7 +119,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
     /**
      *
      * @param {type} callback
-     * @returns {undefined}
+     * @returns {object} responce
      */
     this.readGamesList = function (home, type, callback) {
         let postdata = {
@@ -146,7 +146,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
     /**
      *
      * @param {type} callback
-     * @returns {undefined}
+     * @returns {object} responce
      */
     this.readWinners = function (callback) {
         let postdata = {
@@ -169,7 +169,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
     /**
      *
      * @param {type} callback
-     * @returns {undefined}
+     * @returns {object} responce
      */
     this.readNews = function (callback) {
         let postdata = {
@@ -193,7 +193,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
     /**
      *
      * @param {type} callback
-     * @returns {undefined}
+     * @returns {object} responce
      */
     this.readRecomendations = function (callback) {
         let postdata = {
@@ -219,7 +219,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      *
      * @param {type} data
      * @param {type} callback
-     * @returns {undefined}
+     * @returns {object} responce
      */
     this.addNewUser = function (data, callback) {
         let postdata = {
@@ -240,7 +240,12 @@ gameAppl.service('DataServiceSQL', function ($http) {
                     callback(error);
                 });
     };
-
+    /**
+     *
+     * @param {type} data
+     * @param {type} callback
+     * @returns {object} responce
+     */
     this.login = function (data, callback) {
         let postdata = {
             op: 'login',
@@ -257,6 +262,54 @@ gameAppl.service('DataServiceSQL', function ($http) {
                 }, function (error) {
                     callback(error);
                 });
+    };
+
+    this.getUserData = function (userId, callback) {
+        let postdata = {
+            op: 'getUser',
+            userId: userId
+        };
+        $http({
+            method: "POST",
+            url: "../gamearea/php/api.php",
+            data: JSON.strigify(postdata),
+            headers: {
+                'Content-type': 'application/json', 'Access-Control-Allow-Methods': 'POST,GET,PUT,DELETE,OPTION', 'Access-Control-Allow-Original': '*'
+            }
+        }).then(
+                function (res) {
+                    callback(res);
+                },
+                function (err) {
+                    callback(err);
+                }
+        )
+
+    };
+
+    this.getUserGames = function (id_user, callback) {
+        let postdata = {
+            op: 'userAccount',
+            data: {
+                userId: id_user,
+            }
+        };
+        $http({
+            method: "POST",
+            url: "../gamearea/php/api.php",
+            data: JSON.stringify(postdata),
+            headers: {
+                'Content-type': 'application/json', 'Access-Control-Allow-Methods': 'POST,GET,PUT,DELETE,OPTION', 'Access-Control-Allow-Original': '*'
+            }
+        }).then(
+                function (res) {
+                    callback(res);
+                },
+                function (err) {
+                    callback(err);
+                }
+        )
+
     };
 
 });

@@ -1,3 +1,47 @@
+@import url("../appl/Home/style.css");
+@import url("../appl/Demo/style.css");
+@import url("../appl/Login/styleLogin.css");
+@import url("../appl/Real/style.css");
+@import url("../appl/Recomendations/style.css");
+@import url("../appl/Registration/style.css");
+@import url("../appl/Sign/styleSign.css");
+@import url("../appl/Stripwinners/style.css");
+@import url("../appl/Terms/style.css");
+@import url("../appl/Topemenu/style.css");
+/*
+    Created on : Jul 3, 2017, 12:31:22 PM
+    Author     : Grego
+*/
+#userValues tbody td {
+  color: navy;
+  font-size: 120%; }
+
+#userGames_wrapper table {
+  background-color: blue; }
+  #userGames_wrapper table th {
+    font-size: 150%  !important;
+    color: navy !important; }
+  #userGames_wrapper table td {
+    font-size: 150%  !important;
+    color: navy !important; }
+  #userGames_wrapper table:hover td {
+    color: navy !important; }
+#userGames_wrapper div.dataTables_length select {
+  color: navy !important; }
+#userGames_wrapper input[type='search'] {
+  color: navy !important; }
+#userGames_wrapper td:hover {
+  color: orange !important; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 3, 2017, 12:33:34 PM
+    Author     : Grego
+*/
 * {
   margin: 0 0 0 0;
   padding: 0 0 0 0;

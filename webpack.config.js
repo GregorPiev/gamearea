@@ -6,28 +6,13 @@ var OUTPUT = path.resolve(__dirname, "dist");
 
 var config = {
     entry: {
-        page1: DEV + "/appl.js",
-        page2: DEV + "/Account/ctrlAccount.js",
-        page3: DEV + "/Contact/ctrlContact.js",
-        page4: DEV + "/Demo/ctrlDemo.js",
-        page5: DEV + "/Home/ctrHome.js",
-        page6: DEV + "/Login/ctrlLogin.js",
-        page7: DEV + "/Real/ctrlReal.js",
-        page8: DEV + "/Recomendations/ctrlRecomendatins.js",
-        page9: DEV + "/Registration/ctrlRegistration.js",
-        page10: DEV + "/Sign/ctrlSign.js",
-        page11: DEV + "/Stripwinners/ctrlStripwinners.js",
-        page12: DEV + "/Terms/ctrlTerms.js",
-        page13: DEV + "/Topemenu/ctrlTopmenu.js",
-        page14: DEV + "/config.js",
-        page15: DEV + "/service.js",
-        page16: DEV + "/serviseFirebase.js",
-        page17: DEV + "/sfire.js",
+        page1: DEV + "/appl.js"
+
     },
     output: {
         path: path.join(OUTPUT),
         publicPath: "dist/",
-        filename: "[name].bundle.js"
+        filename: "bundle.js"
     },
     module: {
         loaders: [

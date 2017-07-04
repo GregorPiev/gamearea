@@ -1,6 +1,10 @@
 'use strict'
 gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
     let user_login = null;
+    let active_item = "home";
+    $rootScope.$on("changeMenu", function (event, data) {
+        active_item = data;
+    });
 
 
     $rootScope.$on("login", function (event, data) {
@@ -33,6 +37,10 @@ gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
 
     $scope.getStatusUser = function () {
         return (user_login === null) ? false : true;
+    };
+
+    $scope.setActiveMenu = function (item) {
+        return (item == active_item) ? 'active' : '';
     };
 
 
