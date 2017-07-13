@@ -4,6 +4,7 @@ gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
 
 
     $rootScope.$on("login", function (event, data) {
+        console.log("%cLogin", "color:green");
         user_login = JSON.parse($window.localStorage.getItem("logined"));
         angular.element("#anonim").hide();
         $("#logined").show();
@@ -11,11 +12,13 @@ gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
     });
 
     $(document).ready(function () {
+        console.log("%cctrTopmenu Document ready", "color:blue;");
         user_login = JSON.parse($window.localStorage.getItem("logined"));
         if (user_login === null) {
             angular.element("#anonim").show();
             angular.element("#logined").hide();
             $("#user_values").html('');
+            $rootScope.$emit("powerLogin", "Default User");
         } else {
             angular.element("#anonim").hide();
             $("#logined").show();
