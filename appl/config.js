@@ -1,8 +1,9 @@
 'use strict';
 gameAppl.config(function ($stateProvider, $urlRouterProvider) {
-    //$localStorageProvider.set("counter", 1);
     $urlRouterProvider.otherwise('/');
-    console.log("Config start");
+    console.log("%cConfig start", "color:orange");
+
+
     $stateProvider
             .state('Home', {
                 url: '/',
@@ -154,3 +155,10 @@ gameAppl.run([function () {
         firebase.initializeApp(config);
     }]);
 
+angular.element(document).ready(function () {
+    console.log("%cDocument ready", "color:brown");
+    let $injector = angular.injector(['ng']);
+    let $window = $injector.get("$window");
+    let counter = $window.localStorage.getItem("counter");
+    $window.localStorage.setItem("counter", ++counter);
+});
