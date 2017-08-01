@@ -4,12 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/gamearea/appl/config.js</file>
-            <file>file:/C:/xampp/htdocs/gamearea/dist/angular.min.js</file>
-            <file>file:/C:/xampp/htdocs/gamearea/lib/react/react.js</file>
-            <file>file:/C:/xampp/htdocs/gamearea/Gruntfile.js</file>
+            <file>file:/C:/xampp/htdocs/gamearea/appl/Login/ctrlLogin.js</file>
+            <file>file:/C:/xampp/htdocs/gamearea/appl/Sign/ctrlSign.js</file>
             <file>file:/C:/xampp/htdocs/gamearea/index.html</file>
-            <file>file:/C:/xampp/htdocs/gamearea/appl/appl.js</file>
-            <file>file:/C:/xampp/htdocs/gamearea/package.json</file>
+            <file>file:/C:/xampp/htdocs/gamearea/appl/Topemenu/ctrlTopmenu.js</file>
         </group>
     </open-files>
 </project-private>

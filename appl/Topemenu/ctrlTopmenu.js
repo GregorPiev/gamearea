@@ -14,6 +14,7 @@ gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
     $(document).ready(function () {
         console.log("%cctrTopmenu Document ready", "color:blue;");
 
+
         if ($window.localStorage.getItem("logined") === "undefined" || $window.localStorage.getItem("logined") === null) {
             angular.element("#anonim").show();
             angular.element("#logined").hide();

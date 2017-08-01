@@ -42,4 +42,5 @@ gameAppl.controller('ctrlSign', ['$scope', '$rootScope', 'DataServiceSQL', '$win
         $scope.resultMsg = function () {
             return ($scope.resMsg === '') ? false : true;
         };
+
     }]);
