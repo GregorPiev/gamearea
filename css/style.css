@@ -1,13 +1,325 @@
-@import url("../appl/Home/style.css");
-@import url("../appl/Demo/style.css");
-@import url("../appl/Login/styleLogin.css");
-@import url("../appl/Real/style.css");
-@import url("../appl/Recomendations/style.css");
-@import url("../appl/Registration/style.css");
-@import url("../appl/Sign/styleSign.css");
-@import url("../appl/Stripwinners/style.css");
-@import url("../appl/Terms/style.css");
-@import url("../appl/Topemenu/style.css");
+/*
+    Created on : 25-May-2017, 11:13:23
+    Author     : gregori.p
+*/
+.wrapper-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+
+.wrapper-middle label {
+  padding: 15px 0;
+  margin: 10px 0;
+  font-size: 100%; }
+
+.game-item {
+  background-color: blue;
+  border-radius: 5px;
+  margin: 5px; }
+
+.game-item .short-descr {
+  padding: 5px 5px;
+  margin: 10px 0 0 0;
+  font-size: 100%; }
+
+.short-descr-winner {
+  padding: 5px 5px;
+  margin: 10px 0 0 0;
+  font-size: 100%; }
+
+.game-item img {
+  max-height: 150px;
+  min-height: 150px;
+  width: 90%;
+  margin: 10px 5%;
+  border-radius: 5px; }
+
+.game-item h5 {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 120%; }
+
+#wrapper-items {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+
+/*
+    Created on : 25-May-2017, 11:13:23
+    Author     : gregori.p
+*/
+.game-item {
+  background-color: blue;
+  border-radius: 5px;
+  margin: 5px; }
+
+.game-item .short-descr {
+  padding: 5px 5px;
+  margin: 10px 0 0 0;
+  font-size: 100%; }
+
+.game-item img {
+  max-height: 150px;
+  min-height: 150px;
+  width: 90%;
+  margin: 10px 5%;
+  border-radius: 5px; }
+
+.game-item h5 {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 120%; }
+
+/*
+    Created on : 12-Jun-2017, 17:31:03
+    Author     : gregori.p
+*/
+.modal-content {
+  background-color: blue; }
+
+.error-message {
+  color: #fa0; }
+
+/*
+    Created on : 25-May-2017, 11:13:23
+    Author     : gregori.p
+*/
+.game-item {
+  background-color: blue;
+  border-radius: 5px;
+  margin: 5px; }
+
+.game-item .short-descr {
+  padding: 5px 5px;
+  margin: 10px 0 0 0;
+  font-size: 100%; }
+
+.game-item img {
+  max-height: 150px;
+  min-height: 150px;
+  width: 90%;
+  margin: 10px 5%;
+  border-radius: 5px; }
+
+.game-item h5 {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 120%; }
+
+/*
+    Created on : 26-Jun-2017, 14:11:48
+    Author     : gregori.p
+*/
+* {
+  box-sizing: border-box; }
+
+body {
+  /*    font-family: sans-serif;
+      font-weight: 300;*/
+  /*    background-color: #eaeaea;*/ }
+
+#mount-point {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: navy !important; }
+
+.note {
+  width: 200px;
+  height: auto;
+  float: left;
+  background-color: yellow;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  color: navy !important; }
+
+div.note span {
+  color: navy !important; }
+
+.note:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.delete-note {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer; }
+
+.note:hover .delete-note {
+  display: block; }
+
+.note-editor {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+  margin: 16px auto;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.textarea {
+  width: 100%;
+  resize: none;
+  margin: 5px;
+  font-size: 14px;
+  border: none;
+  font-weight: 300;
+  color: navy !important; }
+
+.textarea:focus {
+  outline: 0; }
+
+.add-button {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  width: 100px;
+  background-color: #44c767;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 8px 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627; }
+
+.add-button:hover {
+  background-color: #5cbf2a; }
+
+.add-button:active {
+  position: relative;
+  top: 1px; }
+
+.add-button:focus {
+  outline: 0; }
+
+.notes-grid {
+  margin: 0 auto; }
+
+.notes-app {
+  max-width: 960px;
+  width: 100%; }
+
+.app-header {
+  text-align: center;
+  font-weight: 500;
+  color: grey;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5); }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 1, 2017, 5:56:12 PM
+    Author     : Administrator
+*/
+/*
+    Created on : 12-Jun-2017, 17:31:03
+    Author     : gregori.p
+*/
+.modal-content {
+  background-color: blue; }
+
+.error-message {
+  color: #fa0; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 1, 2017, 5:57:10 PM
+    Author     : Administrator
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 1, 2017, 5:57:27 PM
+    Author     : Administrator
+*/
+/*
+    Created on : 25-May-2017, 11:13:23
+    Author     : gregori.p
+*/
+.navbar-custom {
+  background-color: navy; }
+
+a.topmenu-link {
+  color: navy;
+  font-size: 100%;
+  background-color: #63c2c8 !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-left: 1px; }
+
+a.topmenu-link:hover {
+  color: #fff;
+  font-size: 100%;
+  background-color: blue !important; }
+
+#user-wrapper {
+  margin: 3px 0 auto 0; }
+
+.button-sign {
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  border-radius: 3px !important; }
+
+#anonim {
+  margin-top: 10px;
+  margin-left: 5px; }
+
+#logined {
+  margin-left: 5px;
+  float: right !important; }
+
+li.active a.topmenu-link {
+  color: #fff;
+  background-color: blue !important; }
+
+.navbar {
+  border-width: 0 !important; }
+
 /*
     Created on : Jul 3, 2017, 12:31:22 PM
     Author     : Grego
