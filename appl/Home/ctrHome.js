@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrHome', ['$scope', '$rootScope', 'DataServiceSQL', function ($scope, $rootScope, DataServiceSQL) {
+angular.module('gameAppl').controller('ctrHome', ['$scope', '$rootScope', 'DataServiceSQL', function ($scope, $rootScope, DataServiceSQL) {
         let home = 1;
         let type = "free";
         DataServiceSQL.read(1, function (data) {

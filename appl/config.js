@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.config(function ($stateProvider, $urlRouterProvider) {
+angular.module('gameAppl').config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     console.log("%cConfig start", "color:orange");
 
@@ -143,7 +143,7 @@ gameAppl.config(function ($stateProvider, $urlRouterProvider) {
             });
 });
 
-gameAppl.run();
+angular.module('gameAppl').run();
 
 angular.element(document).ready(function () {
     console.log("%cDocument ready", "color:brown");

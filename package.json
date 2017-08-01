@@ -18,6 +18,12 @@
   "homepage": "https://github.com/GregorPiev/gamearea#readme",
   "dependencies": {
     "grunt-cli": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
     "http-server": "^0.10.0"
   },
   "devDependencies": {

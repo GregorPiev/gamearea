@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.service('Sfire', ['$firebase', '$q', function ($firebase, $q) {
+angular.module('gameAppl').service('Sfire', ['$firebase', '$q', function ($firebase, $q) {
         let config = {
             apiKey: "AIzaSyCuZsJyDThwilTM-6V-bEVla8Iuo3uo2O8",
             authDomain: "gamearea-e98ec.firebaseapp.com",

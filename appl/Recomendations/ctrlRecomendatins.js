@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrlRecomendatins', function ($scope, $rootScope, DataServiceSQL, $window) {
+angular.module('gameAppl').controller('ctrlRecomendatins', function ($scope, $rootScope, DataServiceSQL, $window) {
     $rootScope.$emit("changeMenu", 'recomendations');
 
     DataServiceSQL.read(6, function (data) {

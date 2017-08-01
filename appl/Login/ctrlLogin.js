@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrlLogin', ['$scope', '$rootScope', '$location', 'DataServiceSQL', '$window', function ($scope, $rootScope, $location, DataServiceSQL, $window) {
+angular.module('gameAppl').controller('ctrlLogin', ['$scope', '$rootScope', '$location', 'DataServiceSQL', '$window', function ($scope, $rootScope, $location, DataServiceSQL, $window) {
         let result_send = false;
         $scope.resultMesagge = '';
         console.log("%cctrlogin ", "color:blue;");

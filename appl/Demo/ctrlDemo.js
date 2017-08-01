@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrlDemo', function ($scope, $rootScope, DataServiceSQL) {
+angular.module('gameAppl').controller('ctrlDemo', function ($scope, $rootScope, DataServiceSQL) {
     let home = 0;
     let type = "free";
     $rootScope.$emit('changeMenu', 'demo');

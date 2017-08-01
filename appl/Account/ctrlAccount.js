@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrlAccount', function ($scope, $rootScope, DataServiceSQL, $window) {
+angular.module('gameAppl').controller('ctrlAccount', function ($scope, $rootScope, DataServiceSQL, $window) {
     $rootScope.$emit('changeMenu', 'account');
     let userObj = JSON.parse($window.localStorage.getItem("logined"));
     $scope.name = userObj.fname;

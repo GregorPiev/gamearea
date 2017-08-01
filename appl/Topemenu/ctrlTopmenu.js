@@ -1,5 +1,5 @@
 'use strict'
-gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
+angular.module('gameAppl').controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
     let user_login = null;
 
 

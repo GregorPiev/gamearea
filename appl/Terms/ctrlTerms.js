@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrlTerms', function ($scope, $rootScope, DataServiceSQL) {
+angular.module('gameAppl').controller('ctrlTerms', function ($scope, $rootScope, DataServiceSQL) {
     $rootScope.$emit("changeMenu", 'terms');
     DataServiceSQL.read(5, function (data) {
         //console.log("%cArrived result:" + JSON.stringify(data, null), "color: green;");

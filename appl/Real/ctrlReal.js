@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrlReal', function ($scope, $rootScope, DataServiceSQL) {
+angular.module('gameAppl').controller('ctrlReal', function ($scope, $rootScope, DataServiceSQL) {
     let home = 0;
     let type = "real";
     $rootScope.$emit('changeMenu', 'real');

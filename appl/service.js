@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.service('DataService', function ($http) {
+angular.module('gameAppl').service('DataService', function ($http) {
     this.read = function (url, callback) {
         $http({
             method: "POST",
@@ -17,7 +17,7 @@ gameAppl.service('DataService', function ($http) {
 
 });
 
-gameAppl.service('frService', function ($http) {
+angular.module('gameAppl').service('frService', function ($http) {
     this.read = function (url, callback) {
         $http({
             method: "GET",
@@ -81,7 +81,7 @@ gameAppl.service('frService', function ($http) {
 
 });
 
-gameAppl.service('DataServiceSQL', function ($http) {
+angular.module('gameAppl').service('DataServiceSQL', function ($http) {
     /**
      *
      * @param {type} idpage

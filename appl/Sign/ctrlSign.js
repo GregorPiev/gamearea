@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.controller('ctrlSign', ['$scope', '$rootScope', 'DataServiceSQL', '$window', function ($scope, $rootScope, DataServiceSQL, $window) {
+angular.module('gameAppl').controller('ctrlSign', ['$scope', '$rootScope', 'DataServiceSQL', '$window', function ($scope, $rootScope, DataServiceSQL, $window) {
         $scope.resMsg = '';
 
         $scope.sendVal = function () {
