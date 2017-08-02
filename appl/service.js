@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.service('DataService', function ($http) {
+angular.module('gameAppl').service('DataService', function ($http) {
     this.read = function (url, callback) {
         $http({
             method: "POST",
@@ -17,7 +17,7 @@ gameAppl.service('DataService', function ($http) {
 
 });
 
-gameAppl.service('frService', function ($http) {
+angular.module('gameAppl').service('frService', function ($http) {
     this.read = function (url, callback) {
         $http({
             method: "GET",
@@ -81,7 +81,7 @@ gameAppl.service('frService', function ($http) {
 
 });
 
-gameAppl.service('DataServiceSQL', function ($http) {
+angular.module('gameAppl').service('DataServiceSQL', function ($http) {
     /**
      *
      * @param {type} idpage
@@ -89,7 +89,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      * @returns {object} responce
      */
     this.read = function (idpage, callback) {
-        let postdata = {
+        var postdata = {
             op: 'page',
             data: {
                 idpage: idpage,
@@ -122,7 +122,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      * @returns {object} responce
      */
     this.readGamesList = function (home, type, callback) {
-        let postdata = {
+        var postdata = {
             op: 'game',
             data: {
                 type: type,
@@ -149,7 +149,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      * @returns {object} responce
      */
     this.readWinners = function (callback) {
-        let postdata = {
+        var postdata = {
             op: 'winners'
         };
         $http({
@@ -172,7 +172,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      * @returns {object} responce
      */
     this.readNews = function (callback) {
-        let postdata = {
+        var postdata = {
             op: 'news'
         };
         $http({
@@ -196,7 +196,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      * @returns {object} responce
      */
     this.readRecomendations = function (callback) {
-        let postdata = {
+        var postdata = {
             op: 'recomendations'
         };
         $http({
@@ -222,7 +222,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      * @returns {object} responce
      */
     this.addNewUser = function (data, callback) {
-        let postdata = {
+        var postdata = {
             op: 'addUser',
             data: data
         };
@@ -247,7 +247,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
      * @returns {object} responce
      */
     this.login = function (data, callback) {
-        let postdata = {
+        var postdata = {
             op: 'login',
             data: data
         };
@@ -265,7 +265,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
     };
 
     this.getUserData = function (userId, callback) {
-        let postdata = {
+        var postdata = {
             op: 'getUser',
             userId: userId
         };
@@ -288,7 +288,7 @@ gameAppl.service('DataServiceSQL', function ($http) {
     };
 
     this.getUserGames = function (id_user, callback) {
-        let postdata = {
+        var postdata = {
             op: 'userAccount',
             data: {
                 userId: id_user,

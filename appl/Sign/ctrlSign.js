@@ -1,10 +1,10 @@
 'use strict';
-gameAppl.controller('ctrlSign', ['$scope', '$rootScope', 'DataServiceSQL', '$window', function ($scope, $rootScope, DataServiceSQL, $window) {
+angular.module('gameAppl').controller('ctrlSign', ['$scope', '$rootScope', 'DataServiceSQL', '$window', function ($scope, $rootScope, DataServiceSQL, $window) {
         $scope.resMsg = '';
 
         $scope.sendVal = function () {
-            let client = {fname: '', address: '', city: '', email: '', username: '', password: '', phone: ''};
-            let user = {fname: '', address: '', city: '', email: '', username: '', phone: ''};
+            var client = {fname: '', address: '', city: '', email: '', username: '', password: '', phone: ''};
+            var user = {fname: '', address: '', city: '', email: '', username: '', phone: ''};
             client.fname = $scope.client.fname;
             client.city = $scope.client.city;
             client.email = $scope.client.email;
@@ -42,4 +42,5 @@ gameAppl.controller('ctrlSign', ['$scope', '$rootScope', 'DataServiceSQL', '$win
         $scope.resultMsg = function () {
             return ($scope.resMsg === '') ? false : true;
         };
+
     }]);

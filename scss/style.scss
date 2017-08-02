@@ -1,13 +1,15 @@
-@import url("../appl/Home/style.css");
-@import url('../appl/Demo/style.css');
-@import url('../appl/Login/styleLogin.css');
-@import url('../appl/Real/style.css');
-@import url('../appl/Recomendations/style.css');
-@import url('../appl/Registration/style.css');
-@import url('../appl/Sign/styleSign.css');
-@import url('../appl/Stripwinners/style.css');
-@import url('../appl/Terms/style.css');
-@import url('../appl/Topemenu/style.css');
+@import '../lib/bootstrap/bootstrap.min.css';
+@import '../lib/datatables/dataTables.bootstrap.css';
+@import "../appl/Home/homestyle.scss";
+@import '../appl/Demo/style.scss';
+@import '../appl/Login/style.scss';
+@import '../appl/Real/style.scss';
+@import '../appl/Recomendations/style.scss';
+@import '../appl/Registration/style.scss';
+@import '../appl/Sign/style.scss';
+@import '../appl/Stripwinners/style.scss';
+@import '../appl/Terms/style.scss';
+@import '../appl/Topemenu/style.scss';
 @import "../appl/Account/styleAccount.scss";
 @import "../appl/Contact/styleContact.scss";
 *{
@@ -57,4 +59,3 @@ img#toplogo{
         .panel-default {border: none;}
     }
 }
-

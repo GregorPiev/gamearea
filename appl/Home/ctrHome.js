@@ -1,10 +1,10 @@
 'use strict';
-gameAppl.controller('ctrHome', ['$scope', '$rootScope', 'DataServiceSQL', function ($scope, $rootScope, DataServiceSQL) {
-        let home = 1;
-        let type = "free";
+angular.module('gameAppl').controller('ctrHome', ['$scope', '$rootScope', 'DataServiceSQL', function ($scope, $rootScope, DataServiceSQL) {
+        var home = 1;
+        var type = "free";
         DataServiceSQL.read(1, function (data) {
             if (data.status == 200) {
-                let result = data.data.data;
+                var result = data.data.data;
                 $scope.homecontent = result.content;
             }
         });
@@ -12,7 +12,7 @@ gameAppl.controller('ctrHome', ['$scope', '$rootScope', 'DataServiceSQL', functi
             //console.info("%c Read Home Games Status:" + data.status, "color:orange");
             //console.info("%cReadHomeGames:" + JSON.stringify(data.data.data), "color:green");
             if (data.status == 200) {
-                let result = data.data.data;
+                var result = data.data.data;
                 $scope.popgames = result;
             }
         });

@@ -1,13 +1,10 @@
 'use strict'
-gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
-    let user_login = null;
-    let active_item = "home";
-    $rootScope.$on("changeMenu", function (event, data) {
-        active_item = data;
-    });
+angular.module('gameAppl').controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
+    var user_login = null;
 
 
     $rootScope.$on("login", function (event, data) {
+        console.log("%cLogin", "color:green");
         user_login = JSON.parse($window.localStorage.getItem("logined"));
         angular.element("#anonim").hide();
         $("#logined").show();
@@ -15,14 +12,18 @@ gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
     });
 
     $(document).ready(function () {
-        user_login = JSON.parse($window.localStorage.getItem("logined"));
-        if (user_login === null) {
+        console.log("%cctrTopmenu Document ready", "color:blue;");
+
+
+        if ($window.localStorage.getItem("logined") === "undefined" || $window.localStorage.getItem("logined") === null) {
             angular.element("#anonim").show();
             angular.element("#logined").hide();
             $("#user_values").html('');
+            $rootScope.$emit("powerLogin", "Default User");
         } else {
             angular.element("#anonim").hide();
             $("#logined").show();
+            user_login = JSON.parse($window.localStorage.getItem("logined"));
             $("#user_values").html(user_login.fname);
         }
     });
@@ -37,10 +38,6 @@ gameAppl.controller('ctrlTopmenu', function ($scope, $window, $rootScope) {
 
     $scope.getStatusUser = function () {
         return (user_login === null) ? false : true;
-    };
-
-    $scope.setActiveMenu = function (item) {
-        return (item == active_item) ? 'active' : '';
     };
 
 

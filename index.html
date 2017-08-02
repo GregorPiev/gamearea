@@ -4,17 +4,7 @@
         <title>Game Area</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="lib/jquery/jquery-1.11.3.js"></script>
-        <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet"/>
-        <script src="lib/bootstrap/bootstrap.min.js"></script>
-        <script src="lib/datatables/jquery.dataTables.min.js"></script>
-        <link href="lib/datatables/dataTables.bootstrap.css" type="text/css" rel="stylesheet"/>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
-
+        <script src="dist/libs.min.js"></script>
         <link href="http://getbootstrap.com/favicon.ico" rel="icon">
         <link href="css/style.css" rel="stylesheet" />
         <base href="gamearea">
@@ -38,33 +28,51 @@
     <ng-include src="'appl/Sign/sign.html'"></ng-include>
     <ng-include src="'appl/Login/login.html'"></ng-include>
 
-    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-    <script src="lib/angular/1.4.4/angular.min.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
-    <script src="lib/angular/angular-route.min.js"></script>
-    <script src="lib/angular/angular-ui-router.js"></script>
-    <script src="lib/angular/sanitize.js"></script>
-    <script src="lib/angular/ng-file-upload.js"></script>
-    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>-->
-    <script src="appl/appl.js"></script>
-    <script src="appl/config.js"></script>
-    <script src="appl/Account/ctrlAccount.js"></script>
-    <script src="appl/Contact/ctrlContact.js"></script>
-    <script src="appl/Demo/ctrlDemo.js"></script>
-    <script src="appl/Home/ctrHome.js"></script>
-    <script src="appl/Recomendations/ctrlRecomendatins.js"></script>
 
-    <script src="appl/Real/ctrlReal.js"></script>
-    <script src="appl/Registration/ctrlRegistration.js"></script>
-    <script src="appl/Stripwinners/ctrlStripwinners.js"></script>
-    <script src="appl/Terms/ctrlTerms.js"></script>
-    <script src="appl/Topemenu/ctrlTopmenu.js"></script>
-    <script src="appl/Sign/ctrlSign.js"></script>
-    <script src="appl/Login/ctrlLogin.js"></script>
-    <script src="appl/service.js"></script>
+    <script src="dist/angular.min.js"></script>
+    <script src="dist/application.min.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
-    <script src="appl/serviseFirebase.js"></script>
-    <script src="appl/Recomendations/note.js" type="text/babel"></script>
+    <!--gamearea JS -->
+    <!-- build:js  angular.min.js -->
+    <!--    <script src="lib/angular/1.4.4/angular.min.js"></script>
+        <script src="lib/angular/angular-route.min.js"></script>
+        <script src="lib/angular/angular-ui-router.js"></script>
+        <script src="lib/angular/sanitize.js"></script>
+        <script src="lib/angular/ng-file-upload.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js  application.min.js -->
+    <!--    <script src="appl/appl.js"></script>
+        <script src="appl/config.js"></script>
+        <script src="appl/Account/ctrlAccount.js"></script>
+        <script src="appl/Contact/ctrlContact.js"></script>
+        <script src="appl/service.js"></script>
+        <script src="appl/Demo/ctrlDemo.js"></script>
+        <script src="appl/Home/ctrHome.js"></script>
+        <script src="appl/Recomendations/ctrlRecomendatins.js"></script>
+        <script src="appl/Real/ctrlReal.js"></script>
+        <script src="appl/Registration/ctrlRegistration.js"></script>
+        <script src="appl/Stripwinners/ctrlStripwinners.js"></script>
+        <script src="appl/Terms/ctrlTerms.js"></script>
+        <script src="appl/Topemenu/ctrlTopmenu.js"></script>
+        <script src="appl/Sign/ctrlSign.js"></script>
+        <script src="appl/Login/ctrlLogin.js"></script>-->
+    <!-- endbuild -->
+
+    <!--gamearea JS -->
+    <!-- build:js  libs.min.js -->
+    <!-- <script src="lib/jquery/jquery-1.11.3.js"></script>
+        <script src="lib/bootstrap/bootstrap.min.js"></script>
+        <script src="lib/datatables/jquery.dataTables.min.js"></script>-->
+    <!-- endbuild -->
+
+    <!-- build:js  react.min.js -->
+    <!--        <script src="lib/react/react.js"></script>
+            <script src="lib/react/react-dom.js"></script>
+            <script src="lib/browser.js"></script>
+            <script src="lib/masonry.pkgd.min.js"></script>-->
+    <!-- endbuild -->
+
+
 </body>
 </html>

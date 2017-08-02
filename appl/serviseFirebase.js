@@ -1,5 +1,5 @@
 'use strict';
-gameAppl.service('serviceFire', ['$firebase', function ($firebase) {
+angular.module('gameAppl').service('serviceFire', ['$firebase', function ($firebase) {
         return{
             newdata: function (config) {
                 var firebaseRef = new Firebase("https://gamearea-e98ec.firebaseio.com/" + config.projectId);
