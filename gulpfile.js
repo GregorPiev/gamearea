@@ -7,11 +7,11 @@ var ngAnotate = require('gulp-ng-annotate');
 gulp.task('js', function () {
     gulp.src(['appl/*.js', 'appl/**/*.js', '!appl/Recomendations/note.js'])
             .pipe(sourcemaps.init())
-            .pipe(concat('application.js'))
-            //.pipe(ngAnotate())
-            //.pipe(uglify())
+            .pipe(concat('application.min.js'))
+            .pipe(ngAnotate())
+            .pipe(uglify())
             .pipe(sourcemaps.write())
-            .pipe(gulp.dest('.tmp/concat'));
+            .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch:js', ['js'], function () {

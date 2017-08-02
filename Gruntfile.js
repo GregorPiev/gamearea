@@ -1,33 +1,38 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        clean: ["dist", 'dist'],
+        clean: ["dist", '.tmp'],
         copy: {
-            application: {
-                expand: true,
-                src: ['appl/**/*.{js}'],
-                dest: 'dist/'
-            }
-        },
-        angular: {
-            expand: true,
-            src: ['lib/angular/**'],
-            dest: 'dist/'
-        },
-        libs: {
-            expand: true,
-            src: ['lib/jquery/jquery-1.11.3.js', 'lib/bootstrap/bootstrap.min.js', 'lib/datatables/jquery.dataTables.min.js'],
-            dest: 'dist/'
-        },
-        libcss: {
-            expand: true,
-            src: ['lib/bootstrap/bootstrap.min.css', 'lib/datatables/dataTables.bootstrap.css'],
-            dest: 'dist/'
-        },
-        react: {
-            expand: true,
-            src: ['lib/react/**/*.js'],
-            dest: 'dist/'
+//            application: {
+//                expand: true,
+//                cwd: 'appl/',
+//                src: ['**', '**/*.{js}', '!**/*.html', '!**/*.scss'],
+//                dest: 'dist/'
+//            },
+//            angular: {
+//                expand: true,
+//                cwd: 'lib/angular/',
+//                src: ['**', '!1.4.4/**'],
+//                dest: 'dist/'
+//            },
+//            libs: {
+//                expand: true,
+//                cwd: 'lib/',
+//                src: ['jquery/jquery-1.11.3.js', 'bootstrap/bootstrap.min.js', 'datatables/jquery.dataTables.min.js'],
+//                dest: 'dist/'
+//            },
+//            libcss: {
+//                expand: true,
+//                cwd: 'lib/',
+//                src: ['bootstrap/bootstrap.min.css', 'datatables/dataTables.bootstrap.css'],
+//                dest: 'dist/'
+//            }
+//            react: {
+//                expand: true,
+//                cwd: 'lib/',
+//                src: ['react/**/*.js'],
+//                dest: 'dist/'
+//            }
         },
         useminPrepare: {
             html: 'index.html'
@@ -39,19 +44,24 @@ module.exports = function (grunt) {
             options: {
                 report: 'min',
                 mangle: false
+            },
+            files: {
+                expand: true,
+                src: '!*.css'
             }
         }
 
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
+    //grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    //grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-usemin');
 
-    grunt.registerTask('default', ['copy', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin']);
+    //grunt.registerTask('default', ['copy', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin']);
+    grunt.registerTask('default', ['useminPrepare', 'concat', 'uglify', 'usemin']);
 
 };
 

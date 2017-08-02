@@ -1,6 +1,6 @@
 'use strict';
 angular.module('gameAppl').service('Sfire', ['$firebase', '$q', function ($firebase, $q) {
-        let config = {
+        var config = {
             apiKey: "AIzaSyCuZsJyDThwilTM-6V-bEVla8Iuo3uo2O8",
             authDomain: "gamearea-e98ec.firebaseapp.com",
             databaseURL: "https://gamearea-e98ec.firebaseio.com",
@@ -9,7 +9,7 @@ angular.module('gameAppl').service('Sfire', ['$firebase', '$q', function ($fireb
             messagingSenderId: "837142383254"
         };
         var defaultApp = firebase.initializeApp(config);
-        let database = defaultApp.database.list('/');
+        var database = defaultApp.database.list('/');
         console.table(database);
 
 

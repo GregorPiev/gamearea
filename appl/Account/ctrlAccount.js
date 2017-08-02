@@ -1,17 +1,17 @@
 'use strict';
 angular.module('gameAppl').controller('ctrlAccount', function ($scope, $rootScope, DataServiceSQL, $window) {
     $rootScope.$emit('changeMenu', 'account');
-    let userObj = JSON.parse($window.localStorage.getItem("logined"));
+    var userObj = JSON.parse($window.localStorage.getItem("logined"));
     $scope.name = userObj.fname;
     $scope.email = userObj.email;
     $scope.phone = userObj.phone;
     $scope.address = userObj.address;
     $scope.city = userObj.city;
-    let id_user = userObj.id_user;
+    var id_user = userObj.id_user;
 
     DataServiceSQL.read(8, function (data) {
         if (data.status == 200) {
-            let result = data.data.data;
+            var result = data.data.data;
             $scope.page = result.page;
             $scope.title = result.title;
             $scope.content = result.content;
@@ -20,7 +20,7 @@ angular.module('gameAppl').controller('ctrlAccount', function ($scope, $rootScop
 
     DataServiceSQL.getUserGames(id_user, function (data) {
         if (data.status == 200) {
-            let result = data.data.data;
+            var result = data.data.data;
             console.log("%c Games:" + JSON.stringify(result), "color: green;");
             $('#userGames').dataTable({
 

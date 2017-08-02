@@ -1,13 +1,13 @@
 'use strict';
 angular.module('gameAppl').controller('ctrlLogin', ['$scope', '$rootScope', '$location', 'DataServiceSQL', '$window', function ($scope, $rootScope, $location, DataServiceSQL, $window) {
-        let result_send = false;
+        var result_send = false;
         $scope.resultMesagge = '';
         console.log("%cctrlogin ", "color:blue;");
 
         $scope.sendVal = function () {
-            let username = (typeof $scope.username === 'undefined') ? 'gregp' : $scope.username;
-            let password = (typeof $scope.password === 'undefined') ? 'Gp123456' : $scope.password;
-            let loginvalues = {
+            var username = (typeof $scope.username === 'undefined') ? 'gregp' : $scope.username;
+            var password = (typeof $scope.password === 'undefined') ? 'Gp123456' : $scope.password;
+            var loginvalues = {
                 'username': username,
                 'password': password
             };

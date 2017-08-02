@@ -4,7 +4,7 @@ angular.module('gameAppl').controller('ctrlRecomendatins', function ($scope, $ro
 
     DataServiceSQL.read(6, function (data) {
         if (data.status == 200) {
-            let result = data.data.data;
+            var result = data.data.data;
             $scope.page = result.page;
             $scope.title = result.title;
             $scope.content = result.content;
@@ -13,7 +13,7 @@ angular.module('gameAppl').controller('ctrlRecomendatins', function ($scope, $ro
 
     DataServiceSQL.readRecomendations(function (data) {
         if (data.status == 200) {
-            let result = data.data.data;
+            var result = data.data.data;
             $window.localStorage.setItem("notes", JSON.stringify(result));
         }
 

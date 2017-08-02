@@ -147,8 +147,8 @@ angular.module('gameAppl').run();
 
 angular.element(document).ready(function () {
     console.log("%cDocument ready", "color:brown");
-    let $injector = angular.injector(['ng']);
-    let $window = $injector.get("$window");
-    let counter = $window.localStorage.getItem("counter");
+    var $injector = angular.injector(['ng']);
+    var $window = $injector.get("$window");
+    var counter = $window.localStorage.getItem("counter");
     $window.localStorage.setItem("counter", ++counter);
 });
